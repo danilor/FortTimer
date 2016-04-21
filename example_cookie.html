@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>FortTimer example (Buttons)</title>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="FortTimer.js"></script>
+		<script type="text/javascript" src="js.cookie.js"></script> <!-- Copyright to: https://github.com/js-cookie/js-cookie -->
+		<link href="style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="main">
+			<div class="boxed">
+				<p>Contador de Tiempo con Cookie<br />Este ejemplo no funcionará si no se ejecuta en un servidor apropiado.</p>
+				<p>
+					<a href="#" id="startpause">Iniciar/Pausa</a> | <a href="#" id="stopit">Detener</a>
+				</p>
+				<p>
+					<input type="text" value="00:00:00" id="timer" name="timer" />
+					<p id="status">Detenido</p>
+				</p>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			$( document ).ready(function(e){
+				FortTimer.element = '#timer'; // We set the element selector for the timer
+				FortTimer.cookie = true; // We enabled the cookies
+				FortTimer.cookie_name = "My_cookie"; //We set up the name of the cookie we want to use
+				FortTimer.logs = true; // We enable the logs to see the information in the console	
+				$( "#startpause" ).click(function(e){
+					var status = FortTimer.toggle();
+					if(status){
+						$( "#status" ).html("En ejecución");
+					}else{
+						$( "#status" ).html("En pausa");
+					}
+					e.preventDefault();
+				});
+				$( "#stopit" ).click(function(e){
+					FortTimer.stop();
+					var timed = $( "#timer" ).val();
+					$( "#status" ).html("Detenido");
+					e.preventDefault();
+				});
+				
+				var c = FortTimer.read_cookie();
+				if(c != null && c != ""){
+					FortTimer.start_with_value( c );
+				}
+				
+			});
+		</script>
+	</body>
+</html>

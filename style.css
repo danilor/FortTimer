@@ -1,0 +1,14 @@
+.main{
+	margin-left:auto;
+	margin-right:auto;
+	width:30%;
+}
+
+.boxed{
+	border: solid 1px black;
+	padding: 10px;
+}
+
+.boxed input{
+	width:100%;
+}
