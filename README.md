@@ -33,8 +33,6 @@ En la página es necesario colocar un **INPUT** que pueda contener los datos del
 </p>
 ```
 
-### Funcionalidad básica
-
 Y en el **document ready** de la página se inicia el contador
 
 ```javascript
@@ -42,6 +40,29 @@ FortTimer.element = '#timer'; // El elemento que va a contener el contador
 FortTimer.cookie = false; // Si queremos cookies o no
 FortTimer.logs = true; // Para efectos de desarrollo, si queremos mostrar todos los mensajes de consola
 ```
+
+Al descargar este repositorio encontrará más ejemplos con más detalles sobre cada funcionalidad
+
+## Opciones de ForTimer
+
+* logs: (Boolean) indica si se quiere mostrar los logs en la consola del navegador o no (Default: true)
+* cookie: (Boolean) indica si se quiere hacer uso de la funcionad de cookies o no (Default: false)
+* cookie_name: (String) indica el nombre de la cookie que se desea generar (Default: 'forttimer')
+* element: (String) indica el selector del elemento que se desea usar (Selector Jquery) (Default: null)
+* on_update: (Function) indica la función a ejecutar en cada iteracción del contador (Default: null)
+
+## Funciones
+
+* startit: Inicia el contador
+* start_with_value(value): inicia el contador con una cantidad predeterminada en milisegundos
+* get_seconds: obtiene la cantidad de milisegundos actual
+* update: fuerza la actualización del contador
+* pause: pausa el contador
+* toggle: cambia de estado el contador entre INICIADO y PAUSADO
+* stop: detiene el contador (pone los valores de nuevo en 00:00:00)
+* read_cookie: obtiene el valor de la cookie
+* set_cookie: establece el valor de la cookie con los milisegundos actuales
+* log(text): Manda a la consola el texto indicado
 
 ## Licencia
 
