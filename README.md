@@ -20,9 +20,27 @@ Debido a este problema, y a que no encontramos un contador de tiempo adecuado pa
 Es necesario incluir la librería junto a jQuery y la CookieJS si fuera a ser usada
 
 ```html
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
-	<script type="text/javascript" src="FortTimer.js"></script>
-	<script type="text/javascript" src="js.cookie.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="FortTimer.js"></script>
+<script type="text/javascript" src="js.cookie.js"></script>
+```
+
+En la página es necesario colocar un **INPUT** que pueda contener los datos del contador.
+
+```html
+<p>
+	<input type="text" value="00:00:00" id="timer" name="timer" />
+</p>
+```
+
+### Funcionalidad básica
+
+Y en el **document ready** de la página se inicia el contador
+
+```javascript
+FortTimer.element = '#timer'; // El elemento que va a contener el contador
+FortTimer.cookie = false; // Si queremos cookies o no
+FortTimer.logs = true; // Para efectos de desarrollo, si queremos mostrar todos los mensajes de consola
 ```
 
 ## Licencia
