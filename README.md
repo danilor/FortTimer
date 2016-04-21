@@ -13,6 +13,7 @@ Debido a este problema, y a que no encontramos un contador de tiempo adecuado pa
 ## Requerimientos
 
 * [Jquery 1.x +](https://jquery.com/)
+* [JS Cookie](https://github.com/js-cookie/js-cookie)
 
 ## Licencia
 
