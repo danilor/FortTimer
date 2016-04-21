@@ -12,7 +12,7 @@ Debido a este problema, y a que no encontramos un contador de tiempo adecuado pa
 
 ## Requerimientos
 
--[Jquery 1.x +](https://jquery.com/)
+* [Jquery 1.x +](https://jquery.com/)
 
 ## Licencia
 
