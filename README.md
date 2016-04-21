@@ -15,6 +15,16 @@ Debido a este problema, y a que no encontramos un contador de tiempo adecuado pa
 * [Jquery 1.x +](https://jquery.com/)
 * [JS Cookie](https://github.com/js-cookie/js-cookie)
 
+## Ejemplos de uso
+
+Es necesario incluir la librería junto a jQuery y la CookieJS si fuera a ser usada
+
+```html
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript" src="FortTimer.js"></script>
+	<script type="text/javascript" src="js.cookie.js"></script>
+```
+
 ## Licencia
 
 Este código está protegido bajo la [Licencia MIT](https://opensource.org/licenses/MIT).
