@@ -10,6 +10,10 @@ Por motivos de seguridad, en procesos controlados de intervalos de tiempo, la ma
 
 Debido a este problema, y a que no encontramos un contador de tiempo adecuado para nuestras necesidades específicas, se crea este contador de tiempo y cronómetro con la capacidad de continuar su cuenta aún si el navegador está realizando otras acciones o si el usuario tiene abiertos otros tabs del mismo.
 
+## Requerimientos
+
+-[Jquery 1.x +](https://jquery.com/)
+
 ## Licencia
 
 Este código está protegido bajo la [Licencia MIT](https://opensource.org/licenses/MIT).
